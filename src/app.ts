@@ -19,6 +19,9 @@ const limiter = rateLimit({
     max: 100 // limit each IP to 100 requests per windowMs
 });
 app.use(limiter);
+app.get("/", (_req, res) => {
+    res.status(200).send("Hello from Backend!!!!")
+})
 
 // Routes
 app.use('/api/auth', authRoutes);
