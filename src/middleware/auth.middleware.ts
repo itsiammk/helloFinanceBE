@@ -1,4 +1,3 @@
-// src/middleware/auth.middleware.ts
 import { Request, Response, NextFunction } from 'express';
 import { verifyToken } from '../utils/jwt.utils';
 import User from '../models/user.model';
@@ -45,9 +44,10 @@ export const protect = async (
             });
         }
 
-        next();
+        return next(); // ✅ Ensure the function always ends properly
+
     } catch (error) {
-        res.status(401).json({
+        return res.status(401).json({
             success: false,
             message: 'Not authorized to access this route'
         });
