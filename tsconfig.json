@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+      "target": "es2018",
+      "module": "commonjs",
+      "lib": ["es2018", "esnext.asynciterable"],
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "strict": true,
+      "typeRoots": ["./node_modules/@types", "./src/types"],
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "resolveJsonModule": true,
+      "removeComments": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "moduleResolution": "node",
+      "baseUrl": ".",
+      "paths": {
+          "*": ["node_modules/*"]
+      }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
